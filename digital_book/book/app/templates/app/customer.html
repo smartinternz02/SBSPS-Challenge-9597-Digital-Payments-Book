@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Digital Payment Book</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons 
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">-->
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="http://127.0.0.1:8000/media/customer/assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="http://127.0.0.1:8000/media/customer/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="http://127.0.0.1:8000/media/customer/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="http://127.0.0.1:8000/media/customer/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="http://127.0.0.1:8000/media/customer/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="http://127.0.0.1:8000/media/customer/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="http://127.0.0.1:8000/media/customer/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="http://127.0.0.1:8000/media/customer/assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: OnePage - v4.9.1
+  * Template URL: https://bootstrapmade.com/onepage-multipurpose-bootstrap-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+   <script>
+if ( window.history.replaceState ) {
+  window.history.replaceState( null, null, window.location.href );
+}
+</script>
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    {%for message in messages%}
+    <div class="container-fluid p-0">
+          <div class="alert {{ message.tags }} alert-dismissible" role="alert" >
+          <center>{{ message }}</center>
+          </div>
+      </div>
+      {%endfor%}
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <h1 class="logo text-danger"><a href="index.html">Digital Payment Book</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="{%url 'home' %}">Home</a></li>
+          <li><a class="nav-link scrollto" href="{%url 'logout' %}">Logout</a></li>
+
+
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
+      <div class="row justify-content-center">
+        <div class="col-xl-7 col-lg-9 text-center">
+          <h1>Sign-up</h1>
+          <h2></h2>
+        </div>
+      </div>
+      
+<form class="" style="text-align:center;" method='POST'>
+{%csrf_token%} 
+<div class="container "> 
+
+  <div class="row-md-4">
+    <label for="validationDefault02" class="form-label"><strong>username</strong></label>
+    <center><input type="text" name='username' class="form-control w-50" id="validationDefault02" value="{{i.name}}" required></center>
+  </div><br><br>
+  <div class="row-md-4">
+    <label for="validationDefault02" class="form-label"><strong>email</strong></label>
+    <center><input type="email" name='email' class="form-control w-50" id="validationDefault02" value="{{i.email}}" required></center>
+  </div><br><br> 
+    <div class="row-md-4">
+    <label for="validationDefault02" class="form-label"><strong>phone</strong></label>
+    <center><input type="tel" name='phone' class="form-control w-50" id="validationDefault02" value="{{i.phone}}" required></center>
+  </div><br><br> 
+    <div class="row-md-4">
+    <label for="validationDefault02" class="form-label"><strong>password</strong></label>
+    <center><input type="password" name='p1' class="form-control w-50" id="validationDefault02" value="" required></center>
+  </div><br><br> 
+  <div class="row-md-4">
+    <label for="validationDefault02" class="form-label"><strong>confirm password</strong></label>
+    <center><input type="password" name='p2' class="form-control w-50" id="validationDefault02" value="" required></center>
+  </div><br><br>   
+
+  <div class="row">
+    <center><button class="btn  w-25" type="submit" style="background-color:#0a257a;color:white;">Register</button></center>
+  </div> 
+ </div><br><br>
+</form>
+
+  </section><!-- End Hero -->
+
+ 
+  <!-- Vendor JS Files -->
+  <script src="http://127.0.0.1:8000/media/customer/assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="http://127.0.0.1:8000/media/customer/assets/vendor/aos/aos.js"></script>
+  <script src="http://127.0.0.1:8000/media/customer/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="http://127.0.0.1:8000/media/customer/assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="http://127.0.0.1:8000/media/customer/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="http://127.0.0.1:8000/media/customer/assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="http://127.0.0.1:8000/media/customer/assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="http://127.0.0.1:8000/media/customer/assets/js/main.js"></script>
+
+</body>
+
+</html>

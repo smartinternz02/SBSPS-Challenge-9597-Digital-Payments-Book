@@ -1,0 +1,27 @@
+
+1. 	First you need to activate virtual environment 
+	To activate virtuelenv 
+		1. go to folder where venv folder is the open cmd the type 
+			'venv\scripts\activate'  for windows
+			'venv\scripts\bin\activate' for linux
+
+2. Install required packages 
+	to install pip install -requirements.txt
+
+3. open cmd where manage.py is located and type 'py manage.py runserver'
+
+
+4.	To send email Asynchronously we need celery and Rabbitmq message Broker 
+		To download rabbitmq check='https://www.rabbitmq.com/download.html'
+
+5. After download rabbitmq server start the server
+
+6. open cmd and go to location where py manage.py runserver is located
+	
+7 . type 'celery -A book worker -l info --pool=solo' -windows
+
+8 . go to browser and type '127.0.0.1:8000'
+
+9. there you go project will run....
+
+
