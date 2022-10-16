@@ -1,0 +1,20 @@
+# SBSPS-Challenge-9597-Digital-Payments-Book
+Digital Payments Book
+-our project is title is digital payment book
+-our project is a digital ledger where a shop owner enter their daily sales report
+-shop owners can add customers through our project
+-both customer and shop owner have to register
+-customers can view their purchased details and buy products with debt(pay later mode)
+-shop owners can view the customers purchase history, they can view list of customers in their shop, they can view purchase history of all the customers in their shop list
+-shop owners can alert the customer who has to pay the debt
+-once that customer paid the pending money, shop owners can remove that customer from debt list
+-this the major difference between other ledgers and our project --> customers can also add the shop they want to their list by providing the id of the shop
+--> alert message will be automatically sent when the debt due date of that customer exceeds
+--> shop owners don't need to worry about sending alert message of debt, everything is automated in our project
+--> easy to use for both small and big companies
+--> fast and robust
+--> our project is user friendly even for inexperience user
+technologies involved in our project :
+--> Django (python server)
+--> python
+--> HTML, CSS , JavaScript
